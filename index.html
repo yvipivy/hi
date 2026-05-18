@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hi</title>
+    <style>
+        body {
+      background-image: url ('https://pin.it/6spPbmTNJ');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .card {
+            background-color: #ffffff;
+            width: 90%;
+            max-width: 400px;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(156, 39, 176, 0.2);
+            text-align: center;
+            border: 2px solid #ce93d8;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #7b1fa2;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #4a148c;
+        }
+
+        .btn {
+            background-color: #9c27b0;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 50px;
+            cursor: pointer;
+            margin: 10px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #7b1fa2;
+        }
+
+        /* Container for lower middle button */
+        .lower-middle {
+            margin-top: 50px;
+            padding-bottom: 20px;
+        }
+
+        .layer {
+            display: none;
+        }
+
+        .layer.active {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        
+        <!-- LAYER 1: Start -->
+        <div id="layer1" class="layer active">
+            <h1>Hello babyy, crush mo siguro ako kaya ka nandito no?</h1>
+            <button class="btn" onclick="showLayer('layer2')">oo
+            </button>
+            <button class="btn" onclick="showLayer('layer2')">talaga</button>
+            <button class="btn" onclick="showLayer('layer2')">syempre</button>
+            
+        </div>
+
+        <!-- LAYER 2: Choice -->
+        <div id="layer2" class="layer">
+            <h1>i love you baby</h1>
+            <button class="btn" onclick="showLayer('layer3')">i love you too</button>
+            <br>
+            <button class="btn" onclick="showLayer('layer4')">thanks</button>
+        </div>
+
+        <!-- LAYER 3: Sweet Message -->
+        <div id="layer3" class="layer">
+            <h1>Hii my babyyy, happy 2nd to usss! 🫶</h1>
+            <p>I just want to express myself how blessed I am to have you, as my girlfriend. thank you for being my safest place. from cheering me sa mga bagay na I feel unmotivated, and for just being with me sa kahit anong trip (wala ka na talagang magagawa hihi 😝). <br>
+            
+            
+        pero kidding aside, you're such an amazingperson I can rely palagi, even when things get heavy. <br>    
+        
+I want to let you know na I will do everything to make you feel my love palagi <br>
+
+
+mamahalin at pipiliin kita palagi— araw-araw, hihi. </p>
+            <button class="btn" onclick="showLayer('layer2')">Back</button>
+        </div>
+
+        <!-- LAYER 4: AnongThanks + Joke -->
+        <div id="layer4" class="layer">
+            <h1>anong thanks?</h1>
+            <p>☹️🙁🫤😕😞😠😤🥹😭</p>
+            
+            <!-- Button in the lower middle -->
+            <div class="lower-middle">
+                <button class="btn" onclick="showLayer('layer2')">joke lang</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function showLayer(layerId) {
+            // Hide all layers
+            document.querySelectorAll('.layer').forEach(layer => {
+                layer.classList.remove('active');
+            });
+            
+            // Show the selected layer
+            document.getElementById(layerId).classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
